@@ -1,39 +1,61 @@
-/* css/style.css */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --menu-bg-color: #1e1e1e;
+    --link-bg-color: #333;
+    --link-hover-bg-color: #444;
+    --content-bg-color: #1e1e1e;
+    --table-border-color: #333;
+    --table-header-bg-color: #3d3d3d;
+    --table-row-bg-color: #2c2c2c;
+    --button-bg-color: #4CAF50;
+    --button-hover-bg-color: #45a049;
+    --input-bg-color: #2c2c2c;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .menu {
     width: 200px;
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: var(--menu-bg-color);
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .menu h2 {
     margin-top: 0;
+    color: var(--text-color);
 }
 
 a {
     display: block;
     padding: 10px;
-    background-color: #eee;
+    background-color: var(--link-bg-color);
     margin-bottom: 5px;
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 a:hover {
-    background-color: #ddd;
+    background-color: var(--link-hover-bg-color);
 }
 
 .content {
     padding: 20px;
     width: 100%;
+    margin: 10px;
+    background-color: var(--content-bg-color);
+    border-radius: 10px;
 }
 
 table {
@@ -43,13 +65,16 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--table-border-color);
     padding: 8px;
     text-align: left;
+    border-radius: 5px;
+    background-color: var(--table-row-bg-color);
+    color: var(--text-color);
 }
 
 th {
-    background-color: #f0f0f0;
+    background-color: var(--table-header-bg-color);
 }
 
 button {
@@ -57,11 +82,23 @@ button {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background-color: var(--button-bg-color);
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--button-hover-bg-color);
+}
+
+input[type="text"], input[type="number"], input[type="email"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--table-border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
 }
